@@ -1544,7 +1544,6 @@ footer {
   .common-header-wrap {
     /*main, product, makeup에서는 투명하게*/
     background: rgba(255, 255, 255, 0.8);
-    background: transparent;
     height: 50px;
   }
   .common-header-menu {
@@ -1689,12 +1688,12 @@ footer {
 
   /*반응형 헤더 store부분*/
   .common-S {
-    display: flex;
+    display: none;
   }
 
   .common-responsibility-store-top-menu {
     /*store일 때만 flex*/
-    display: flex;
+    display: none;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -1926,10 +1925,10 @@ footer {
   }
 
   .common-responsibility-search-box {
-    width: 88%;
+    width: 90%;
   }
   .common-responsibility-search-box-icon-x {
-    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 390px) {

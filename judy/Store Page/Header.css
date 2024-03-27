@@ -1544,7 +1544,7 @@ footer {
   .common-header-wrap {
     /*main, product, makeup에서는 투명하게*/
     background: rgba(255, 255, 255, 0.8);
-    background: transparent;
+
     height: 50px;
   }
   .common-header-menu {
@@ -1645,7 +1645,7 @@ footer {
     display: none;
   }
   .common-M {
-    display: flex;
+    display: none;
   }
   .common-responsibility-product-top-menu {
     /* common-P/ common-M 누르면 display flex 자바스트립트로 조작 */
@@ -1808,6 +1808,7 @@ footer {
   .common-search-tag {
     width: 90%;
   }
+
   .common-search-tag span {
     width: 98%;
     height: 50px;
@@ -1925,10 +1926,10 @@ footer {
     margin: 30px 0 0 8px;
   }
   .common-responsibility-search-box {
-    width: 88%;
+    width: 90%;
   }
   .common-responsibility-search-box-icon-x {
-    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 390px) {

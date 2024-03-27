@@ -282,12 +282,25 @@ const commonReMenuCateLiR = document.querySelectorAll(
 const commonBtnPlusCate = document.querySelectorAll(
   ".common-responsibility-menu-plus-cate span:nth-child(2)"
 );
+const productTopList = document.querySelector(
+  ".common-responsibility-product-top-menu"
+);
+const productTopListBtn = document.querySelector(".common-P");
+const makeupTopListBtn = document.querySelector(".common-M");
 
-const reset = () => {
-  nextPageBtns.forEach((btn) => {
-    btn.classList.remove("active");
-  });
-};
+makeupTopListBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    productTopList.style.display === "none" ||
+    productTopList.style.display === ""
+  ) {
+    productTopList.style.display = "flex";
+    header.style.height = "500px";
+  } else {
+    productTopList.style.display = "none";
+    header.style.height = "50px";
+  }
+});
 
 const commonMenuBtnIdx = (i) => {
   // commonMenuInnerReset(i);

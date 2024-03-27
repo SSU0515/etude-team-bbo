@@ -138,8 +138,6 @@ ul li:nth-child(20) {
   #makeuplook-main {
     display: inline-block;
     width: 100%;
-    position: absolute;
-    top: -40px;
   }
 }
 
@@ -147,8 +145,6 @@ ul li:nth-child(20) {
   #makeuplook-main {
     display: inline-block;
     width: 100%;
-    position: absolute;
-    top: -40px;
   }
 
   .makeuplook-main-wrap {

@@ -135,6 +135,9 @@ ul li:nth-child(20) {
 /* ========== Media Query ========== */
 /* ========== Media Query ========== */
 @media screen and (max-width: 1024px) {
+  .makeuplook-main-wrap ul {
+    margin-top: -50px;
+  }
   #makeuplook-main {
     display: inline-block;
     width: 100%;

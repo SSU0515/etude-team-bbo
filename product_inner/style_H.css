@@ -1978,7 +1978,9 @@ footer {
   .common-responsibility-search-box-icon-x {
     padding-left: 8px;
   }
-
+  .common-search-click-icon {
+    margin-right: 30px;
+  }
   .common-footer-notice a {
     font-size: 12px;
   }

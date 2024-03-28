@@ -23,19 +23,14 @@ a {
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  /*background: url("./Header_image/mbteye_Main_PC_1920x950.jpg") top/ auto
-    no-repeat;*/
-  /* background-color: #a6a6a6; */
 }
 
 header {
-  /* display: flex; 로 바꿔줌 */
   display: flex;
   width: 100%;
   height: 100px;
   background: rgba(255, 255, 255, 0);
   position: fixed;
-  overflow: hidden;
   z-index: 999;
   transition: all 0.3s;
 }
@@ -102,9 +97,7 @@ header.common-toggle-active {
   background: rgba(231, 232, 234, 0.5);
   z-index: -2;
 }
-/* .common-search-box-header.active {
-  display: block;
-} */
+
 #common-search-box-header-inner {
   width: 90%;
   height: 44px;
@@ -141,8 +134,9 @@ header.common-toggle-active {
 .common-search-btn,
 .common-toggle-btn {
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
 }
 .common-search-btn i {
   display: flex;
@@ -365,15 +359,22 @@ header.common-toggle-active {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  align-items: center;
 }
 .common-responsibility-menu-title span {
+  font-family: "Noto Sans KR";
   font-size: 16px;
-  font-weight: bold;
-  color: #222;
+  font-weight: 500;
+  color: #333;
+}
+.common-responsibility-center-menu i {
+  display: inline-block;
+  font-size: 12px;
 }
 .common-responsibility-brand-top-menu,
 .common-responsibility-product-top-menu,
-.common-responsibility-foundation-top-menu {
+.common-responsibility-foundation-top-menu,
+.common-responsibility-store-top-menu {
   display: none;
 }
 
@@ -400,13 +401,11 @@ header.common-toggle-active {
   top: -400px;
 }
 .common-search-click-header {
-  width: 100%;
+  width: 90%;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* gap: 1550px; */
-  gap: 85%;
+  justify-content: space-between;
 }
 .common-search-click-header .common-logo-img {
   display: inline-block;
@@ -462,7 +461,7 @@ header.common-toggle-active {
   color: #777;
   outline: none;
   border: none;
-  background: rgba(231, 232, 234, 0.5);
+  background: transparent;
 }
 #common-search-box-inner::placeholder {
   color: #777;
@@ -826,7 +825,7 @@ header.common-toggle-active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   transition: all 0.3s;
   cursor: pointer;
-  z-index: 20;
+  z-index: 1000;
 }
 #common-addtocart i {
   font-size: 36px;
@@ -838,6 +837,65 @@ header.common-toggle-active {
 #common-addtocart.active {
   display: block;
   right: 20px;
+}
+.common-addtocart-click {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  font-family: "Noto Sans KR";
+  opacity: 1;
+}
+.common-addtocart-wrap {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  justify-content: center;
+  gap: 10px;
+  bottom: -250px;
+  color: #f5e2e2;
+  font-family: "sofia";
+  animation: addcart 0.2s ease-out both;
+}
+
+@keyframes addcart {
+  0% {
+    bottom: 70px;
+  }
+  50% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 160px;
+  }
+}
+
+.common-addtocart-wrap span {
+  display: inline-block;
+  background: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 10px;
+}
+.add-fa img {
+  margin-top: 6px;
+}
+.add-qa {
+  display: flex;
+  align-items: center;
+  position: static;
+  margin-left: 70px;
 }
 
 /*-------반응형 메뉴버튼 -----------*/
@@ -860,12 +918,15 @@ header.common-toggle-active {
 }
 .common-responsibility-toggle-menu-header {
   display: flex;
+  align-items: center;
   width: 100%;
 }
 .common-responsibility-search-box {
   /* width: 99%; */
+  display: flex;
+  align-items: center;
   padding-left: 10px;
-  width: 94%;
+  width: 92%;
   height: 41px;
   margin: 10px 2% 0;
   font-size: 15px;
@@ -888,16 +949,19 @@ header.common-toggle-active {
 }
 .common-responsibility-search-box-icon {
   position: absolute;
-  right: 5px;
-  top: 2px;
+  right: 2px;
+  top: 0;
   font-size: 23px;
+  cursor: pointer;
 }
 .common-responsibility-search-box-icon-x {
-  position: relative;
   display: inline-block;
+  position: absolute;
+  right: 4%;
+  top: 15px;
+  padding-left: 20px;
   width: 30px;
   height: 30px;
-  margin: 14px auto;
   cursor: pointer;
 }
 
@@ -917,8 +981,8 @@ header.common-toggle-active {
   height: 45px;
   line-height: 45px;
   text-align: center;
-  border-bottom: 2px solid#111;
-  color: #111;
+  border-bottom: 2px solid #777;
+  color: #777;
   font-family: "sofia";
   font-weight: 500;
   cursor: pointer;
@@ -1018,7 +1082,7 @@ header.common-toggle-active {
 
 .common-responsibility-menu-list a {
   display: inline-block;
-  width: 28%;
+  width: 26%;
   margin: 6px 40px;
   color: #777;
 }
@@ -1041,6 +1105,7 @@ header.common-toggle-active {
   margin: 12px 30px;
   font-size: 14px;
   position: relative;
+  cursor: pointer;
 }
 
 .common-responsibility-menu-plus-cate span,
@@ -1189,16 +1254,6 @@ header.common-toggle-active {
 .common-responsibility-store-list div:hover {
   background: #f3f3f3;
 }
-.ex {
-  height: 1000px;
-  color: red;
-}
-.ex-wrap {
-  height: auto;
-
-  opacity: 1;
-}
-/*---desktop 1920px---*/
 
 /*---desktop 1920px---*/
 
@@ -2474,7 +2529,7 @@ footer {
   }
   .common-header-main {
     height: 50px;
-    margin: auto 20px;
+    margin: 10px 20px;
     padding: 0;
   }
   header.active {
@@ -2484,12 +2539,8 @@ footer {
     align-items: center;
     padding: 0;
   }
-  .common-search-click-header {
-    width: 86%;
-    height: 50px;
-  }
-  .common-search-click-header .common-logo-img {
-    margin-left: 50px;
+  .common-search-click-header i {
+    margin-top: 20px;
   }
   .common-logo-img img {
     display: flex;
@@ -2637,7 +2688,7 @@ footer {
   }
   .common-search-click-icon {
     margin-top: -20px;
-    margin-left: 8%;
+    margin-left: 100px;
   }
   .common-search-box {
     width: 92%;
@@ -2645,7 +2696,7 @@ footer {
   }
   #common-search-box-inner {
     width: 94%;
-    background: rgba(255, 255, 255, 0.9);
+    background: transparent;
   }
   .common-search-tag {
     width: 90%;
@@ -3577,11 +3628,19 @@ footer {
   .common-header-wrap {
     background: transparent;
   }
+
+  .common-search-click-section-inner {
+    height: 320px;
+  }
+  .common-search-tag a {
+    margin: 4px;
+  }
+
   .common-responsibility-search-box {
-    width: 90%;
+    width: 88%;
   }
   .common-responsibility-search-box-icon-x {
-    padding-right: 10px;
+    padding-right: 20px;
   }
   /*--- 768px---*/
 
@@ -4963,6 +5022,24 @@ footer {
   }
 }
 @media screen and (max-width: 390px) {
+  .common-responsibility-search-box {
+    width: 86%;
+  }
+  .common-responsibility-search-box-icon-x {
+    padding-left: 8px;
+  }
+  .common-responsibility-menu-list a {
+    display: inline-block;
+    width: 28%;
+    margin-left: 20px;
+    color: #777;
+  }
+  .common-responsibility-menu-list-cate a {
+    display: inline-block;
+    width: 45%;
+    margin: 6px 6px 6px 6px;
+    color: #777;
+  }
   .common-footer-notice a {
     font-size: 12px;
   }

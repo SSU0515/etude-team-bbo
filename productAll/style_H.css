@@ -408,13 +408,11 @@ header.common-toggle-active {
   top: -400px;
 }
 .common-search-click-header {
-  width: 100%;
+  width: 90%;
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* gap: 1550px; */
-  gap: 85%;
+  justify-content: space-between;
 }
 .common-search-click-header .common-logo-img {
   display: inline-block;
@@ -1596,12 +1594,6 @@ footer {
     padding: 0;
   }
 
-  .common-search-click-header {
-    width: 86%;
-  }
-  .common-search-click-header .common-logo-img {
-    margin-left: 50px;
-  }
   .common-logo-img img {
     /*main page 말고 메뉴 페이지에서는 display none*/
     display: none;
@@ -1898,13 +1890,13 @@ footer {
   }
   .common-search-click-header i {
     position: absolute;
-    right: 10px;
+    right: 30px;
   }
   .common-responsibility-search-box {
     width: 88%;
   }
   .common-responsibility-search-box-icon-x {
-    padding-left: 10px;
+    padding-right: 20px;
   }
   .common-footer-wrap {
     width: 100%;
@@ -1968,7 +1960,18 @@ footer {
   .common-responsibility-search-box-icon-x {
     padding-left: 8px;
   }
-
+  .common-responsibility-menu-list a {
+    display: inline-block;
+    width: 28%;
+    margin-left: 20px;
+    color: #777;
+  }
+  .common-responsibility-menu-list-cate a {
+    display: inline-block;
+    width: 45%;
+    margin: 6px 6px 6px 6px;
+    color: #777;
+  }
   .common-footer-notice a {
     font-size: 12px;
   }

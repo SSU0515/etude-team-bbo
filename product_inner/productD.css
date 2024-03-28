@@ -289,11 +289,11 @@ a {
   margin-left: 10px;
 }
 .proD-text-colors span:nth-child(1) {
-  background: url("../content_img/멜론_fca193.jpg") center/cover no-repeat;
+  background: url("./content_img/멜론_fca193.jpg") center/cover no-repeat;
 }
 
 .proD-text-colors span:nth-child(2) {
-  background: url("../content_img/베리_f1a5ae.jpg") center/cover no-repeat;
+  background: url("./content_img/베리_f1a5ae.jpg") center/cover no-repeat;
 }
 .proD-clear {
   margin-top: 10px;

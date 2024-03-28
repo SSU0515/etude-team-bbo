@@ -416,7 +416,7 @@ DsmallClickImgs.forEach((img, i) => {
 DselectColors[0].addEventListener("click", () => {
   proDClear.classList.remove("active");
   DproItems[1].classList.remove("active");
-  DclickImg.src = "../content_img/wh_Blusher_melon_01.png";
+  DclickImg.src = "./content_img/wh_Blusher_melon_01.png";
   DselectColors[0].style.border = "1px solid black";
   DselectColors[1].style.border = "none";
   proDClear.classList.add("active");
@@ -425,7 +425,7 @@ DselectColors[0].addEventListener("click", () => {
 DselectColors[1].addEventListener("click", () => {
   proDClear.classList.remove("active");
   DproItems[0].classList.remove("active");
-  DclickImg.src = "../content_img/wh_Blusher_melon_02.png";
+  DclickImg.src = "./content_img/wh_Blusher_melon_02.png";
   DselectColors[1].style.border = "1px solid black";
   DselectColors[0].style.border = "none";
   proDClear.classList.add("active");
@@ -436,7 +436,7 @@ proDClear.addEventListener("click", () => {
   proDClear.classList.remove("active");
   DselectColors[0].style.border = "none";
   DselectColors[1].style.border = "none";
-  DclickImg.src = "../content_img/wh_Blusher_P_01.jpg";
+  DclickImg.src = "./content_img/wh_Blusher_P_01.jpg";
 });
 
 //하단 random IMG

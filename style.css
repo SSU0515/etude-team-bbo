@@ -795,6 +795,7 @@ header.common-toggle-active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   transition: all 0.3s;
   cursor: pointer;
+  z-index: 10000;
 }
 #common-gototop i {
   font-size: 18px;
@@ -2476,6 +2477,7 @@ footer {
   }
   .common-search-click-header {
     width: 86%;
+    height: 50px;
   }
   .common-search-click-header .common-logo-img {
     margin-left: 50px;
@@ -2484,6 +2486,7 @@ footer {
     display: flex;
     /*main page 말고 메뉴 페이지에서는 display none*/
   }
+
   .common-responsibility-left-icon {
     display: none;
   }
@@ -3566,10 +3569,10 @@ footer {
     background: transparent;
   }
   .common-responsibility-search-box {
-    width: 88%;
+    width: 90%;
   }
   .common-responsibility-search-box-icon-x {
-    padding-left: 10px;
+    padding-right: 10px;
   }
   /*--- 768px---*/
 

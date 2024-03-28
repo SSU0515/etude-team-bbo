@@ -795,6 +795,7 @@ header.common-toggle-active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   transition: all 0.3s;
   cursor: pointer;
+  z-index: 1000;
 }
 #common-gototop i {
   font-size: 18px;

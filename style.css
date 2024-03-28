@@ -1906,6 +1906,9 @@ header.common-toggle-active {
 .two div:nth-child(3) {
   background: #e2a8b4;
 }
+.three div:nth-child(1) {
+  background: none;
+}
 .four div:nth-child(1) {
   background: #a70016;
 }

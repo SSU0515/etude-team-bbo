@@ -478,8 +478,8 @@ const createList = function (product) {
 
   a.append(img, imgHover);
   a.onclick = function () {
-    a.target = "_blank";
-    a.href = "./product_inner/productD.html";
+    a.target = "_self";
+    a.href = "../product_inner/productD.html";
   };
   proLi.append(a, spanNew, div, proPrice);
   ul.appendChild(proLi);
@@ -599,9 +599,8 @@ const createListTwo = function (product) {
 
   a.append(img, imgHover);
   a.onclick = function () {
-    a.target = "_blank";
-    a.href =
-      "https://www.etude.com/shop/category/lip/%ea%b8%80%eb%a0%88%ec%9d%b4%ec%a6%88-%ed%94%8c%eb%9f%bc%ed%94%84-%ea%b8%80%eb%a1%9c%ec%8a%a4-4g/";
+    a.target = "_self";
+    a.href = "../product_inner/productD.html";
   };
   proLi.append(a, spanNew, div, proPrice);
   ul.appendChild(proLi);
@@ -718,9 +717,8 @@ const createListThree = function (product) {
 
   a.append(img, imgHover);
   a.onclick = function () {
-    a.target = "_blank";
-    a.href =
-      "https://www.etude.com/shop/category/lip/%ea%b8%80%eb%a0%88%ec%9d%b4%ec%a6%88-%ed%94%8c%eb%9f%bc%ed%94%84-%ea%b8%80%eb%a1%9c%ec%8a%a4-4g/";
+    a.target = "_self";
+    a.href = "../product_inner/productD.html";
   };
   proLi.append(a, spanNew, div, proPrice);
   ul.appendChild(proLi);

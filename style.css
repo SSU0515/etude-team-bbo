@@ -24,6 +24,29 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+#load {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: block;
+  background: white;
+  z-index: 999999;
+  text-align: center;
+}
+
+#load > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  z-index: 100;
+}
 
 header {
   display: flex;
@@ -1371,27 +1394,25 @@ header.common-toggle-active {
   background: none;
   color: #f5426c;
 }
-
-.main-pager {
+.main-pager-wrapper {
+  width: 90%;
   position: absolute;
   bottom: 10%;
   left: 5%;
-  width: 90%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.main-pager li {
+.main-pager {
   width: 100%;
   height: 1px;
   background: #fff;
-  text-indent: -99999px;
 }
-
-.main-pager li.active {
-  width: 100%;
+.main-pager-bar {
+  width: 12.5%;
   height: 5px;
   background: #fff;
+  position: absolute;
+  bottom: 25%;
+  transition: all 0.3s;
 }
 
 .main-product-page {

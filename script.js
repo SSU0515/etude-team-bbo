@@ -1,3 +1,9 @@
+//loading
+const loading_page = document.getElementById("load");
+window.onload = function () {
+  loading_page.style.display = "none";
+};
+
 const mainProduct = document.querySelector(".common-product-hover");
 const productList = document.querySelector(".common-product-hover-menu");
 const header = document.querySelector("header");
@@ -387,6 +393,8 @@ const commonHeaderMenuClick = document.querySelectorAll(
 //
 //
 //main-slide
+//main-slide
+//main-slide
 
 const mainSlides = document.querySelector(".main-slides");
 const mainSlide = mainSlides.querySelectorAll("li");
@@ -398,10 +406,6 @@ const mainPercent = "%";
 const mainPrevBtn = document.querySelector(".main-prev");
 const mainNextBtn = document.querySelector(".main-next");
 //console.log(mainPrevBtn, mainNextBtn);
-
-//pager
-const mainPagers = document.querySelector(".main-pager");
-const mainPager = document.querySelectorAll(".main-pager li");
 
 const mainText = document.querySelectorAll(".main-slides-text"); //
 
@@ -439,43 +443,60 @@ const mainMakeClone = () => {
 mainMakeClone();
 
 //pager
-const movePager = () => {
-  mainPager.forEach((pager) => {
-    if (pager.classList.contains("active")) {
-      pager.classList.remove("active");
-    }
-  });
-  mainPager[mainCurrentIdx].classList.add("active");
+// const movePager = () => {
+//   mainPager.forEach((pager) => {
+//     if (pager.classList.contains("active")) {
+//       pager.classList.remove("active");
+//     }
+//   });
+//   mainPager[mainCurrentIdx + 1].classList.add("active");
+// };
+const mainBar = document.querySelector(".main-pager-bar");
+const per = 100;
+let p = 0;
+
+const movePager = (p) => {
+  p = mainCurrentIdx;
+  if (p < 8) {
+    p++;
+    mainBar.style.transform = `translateX(${per * p}%)`;
+  }
+  if (p > 0) {
+    p--;
+    mainBar.style.transform = `translateX(${per * p}%)`;
+  }
+  if (mainCurrentIdx === mainSlideCount) {
+    mainBar.style.left = "0px";
+    mainCurrentIdx = 0;
+  }
 };
 
 const mainMoveSlide = (num) => {
   if (num < 0) {
     mainSlides.classList.remove("animated");
-    mainText.classList.remove("active");
     num = mainSlideCount - 1;
 
     setTimeout(() => {
       mainSlides.classList.add("animated");
-      mainText.classList.add("active");
     }, 500);
   }
   //console.log(mainCurrentIdx, mainSlideCount);
   if (mainCurrentIdx === mainSlideCount) {
     setTimeout(() => {
       mainSlides.classList.remove("animated");
-      mainText.classList.remove("active");
+
       mainSlides.style.left = "0px";
       mainCurrentIdx = 0;
     }, 500);
     setTimeout(() => {
       mainSlides.classList.add("animated");
-      mainText.classList.add("active");
     }, 500);
   }
 
   mainSlides.style.left = `${-num * mainSlideWidth}${mainPercent}`;
   mainCurrentIdx = num;
-  movePager();
+
+  movePager(mainCurrentIdx + 1);
 };
 
 mainNextBtn.addEventListener("click", () => {
@@ -509,6 +530,7 @@ mainSlides.addEventListener("mouseleave", () => {
   mainAutoSlide();
 });
 
+//
 //
 //
 //

@@ -1924,6 +1924,12 @@ header.common-toggle-active {
 .four div:nth-child(6) {
   background: #fdb6df;
 }
+.five div:nth-child(1) {
+  background: #ffbec4;
+}
+.five div:nth-child(2) {
+  background: #ffae9c;
+}
 
 .main-new-content-btn {
   display: flex;
